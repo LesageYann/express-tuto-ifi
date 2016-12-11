@@ -12,14 +12,4 @@ app.use( session({
   })
 );
 
-var game = require('./lib/game/router.js').load(express);
-
-
-
-app.use('/game',game);
-
-app.get('/index.html', function(req, res, next) {
-  res.redirect('/game/index.html');
-});
-
 app.listen(8000);
